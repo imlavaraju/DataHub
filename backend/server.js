@@ -13,7 +13,7 @@ PORT = process.env.PORT || 5555;
 app.use("/user", router);
 mongoose
   .connect(
-    "mongodb+srv://imnanilavaraju:9g7F5xYlC29ABJ84@firstmongo.kp5civp.mongodb.net/users_prep?retryWrites=true&w=majority&appName=firstmongo"
+    process.env.mongoose
   )
   .then((res) => console.log("database connected"))
   .catch((r) => console.log(r));
