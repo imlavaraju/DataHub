@@ -9,7 +9,9 @@ app.use(cors());
 dotenv.config();
 
 PORT = process.env.PORT || 5555;
-
+app.get("/",async (req,res)=>{
+  res.status(200).send("working properly")
+}
 app.use("/user", router);
 mongoose
   .connect(
