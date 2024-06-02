@@ -22,7 +22,7 @@ const Main = () => {
   const getData = async () => {
     try {
       const token = Cookies.get("token");
-      const response = await axios.get("http://localhost:5555/user/get/data", {
+      const response = await axios.get("https://data-hub-rho.vercel.app/user/get/data", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const userdata = response.data;
@@ -41,7 +41,7 @@ const Main = () => {
     try {
       const token = Cookies.get("token");
       const response = await axios.post(
-        "http://localhost:5555/user/post/data",
+        "https://data-hub-rho.vercel.app/user/post/data",
         { question: question, answer: Answer },
         { headers: { Authorization: `Bearer ${token}` } }
       );
