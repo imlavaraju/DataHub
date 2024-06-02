@@ -12,7 +12,7 @@ const DeleteQuestion = () => {
     console.log(id);
     axios
       .post(
-        `http://localhost:5555/user/delete/data/${id}`,
+        `https://data-hub-rho.vercel.app/user/delete/data/${id}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
