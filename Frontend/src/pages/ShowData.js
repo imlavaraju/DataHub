@@ -13,7 +13,7 @@ const ShowData = () => {
   const getData = async () => {
     const token = Cookies.get("token");
     try {
-      const response = await axios.get("http://localhost:5555/user/get/data", {
+      const response = await axios.get("https://data-hub-rho.vercel.app/user/get/data", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
