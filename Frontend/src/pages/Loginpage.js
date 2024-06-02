@@ -32,7 +32,7 @@ function SignUppage() {
 
     if (valid) {
       try {
-        const response = await axios.post("http://localhost:5555/user/login", {
+        const response = await axios.post("https://data-hub-rho.vercel.app/user/login", {
           email: email,
           password: password,
         });
