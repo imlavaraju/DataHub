@@ -18,7 +18,7 @@ const EditQuestion = () => {
     const token = Cookies.get("token");
     console.log(token);
     await axios
-      .get(`http://localhost:5555/user/get/singledata/${id}`, {
+      .get(`https://data-hub-rho.vercel.app/user/get/singledata/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
